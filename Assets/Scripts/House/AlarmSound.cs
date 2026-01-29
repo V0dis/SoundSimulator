@@ -20,12 +20,12 @@ public class AlarmSound : MonoBehaviour
         if (_alarmAudio == null)
             return;
         
-        _collisionDetector.OnIntruderEntered += SetAlarm;
+        _collisionDetector.IntruderEntered += SetAlarm;
     }
 
     private void OnDisable()
     {
-        _collisionDetector.OnIntruderEntered -= SetAlarm;
+        _collisionDetector.IntruderEntered -= SetAlarm;
     }
     
     private void SetAlarm(bool isEntered)

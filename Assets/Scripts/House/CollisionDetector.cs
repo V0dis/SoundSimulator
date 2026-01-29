@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class CollisionDetector : MonoBehaviour
 {
-    public event Action<bool> OnIntruderEntered;
+    public event Action<bool> IntruderEntered;
 
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<Enemy>() != null)
-            OnIntruderEntered?.Invoke(true);
+            IntruderEntered?.Invoke(true);
     }
 
     private void OnTriggerExit(Collider collider)
     {
         if (collider.GetComponent<Enemy>() != null) 
-            OnIntruderEntered?.Invoke(false);
+            IntruderEntered?.Invoke(false);
     }
 }
