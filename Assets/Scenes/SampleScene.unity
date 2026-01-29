@@ -677,6 +677,7 @@ GameObject:
   - component: {fileID: 752333963}
   - component: {fileID: 752333962}
   - component: {fileID: 752333967}
+  - component: {fileID: 752333969}
   - component: {fileID: 752333968}
   m_Layer: 0
   m_Name: Enemy
@@ -820,6 +821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9569a33aa14f7eadca26478c3dc05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  _mover: {fileID: 752333968}
+  _userInput: {fileID: 752333969}
 --- !u!114 &752333968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +837,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMovement
   _moveSpeed: 5
   _rotateSpeed: 100
+--- !u!114 &752333969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752333959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05d4a88ef6f45e0898585d4d8ca8bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserInput
 --- !u!1 &772630015
 GameObject:
   m_ObjectHideFlags: 0
