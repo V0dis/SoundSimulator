@@ -998,6 +998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800704220}
+  - component: {fileID: 800704221}
   m_Layer: 0
   m_Name: house
   m_TagString: Untagged
@@ -1024,6 +1025,20 @@ Transform:
   - {fileID: 1242958254}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800704221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800704219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b116e6a6db41ad978c2f9d5e1d563f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::House.House
+  _collisionDetector: {fileID: 1242958250}
+  _alarmSound: {fileID: 1242958252}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d277f8918d824c89b4485ee058a57c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlarmSound
-  _collisionDetector: {fileID: 1242958250}
   _alarmAudio: {fileID: 1242958255}
   _maxVolume: 1
   _fadeSpeed: 0.25
