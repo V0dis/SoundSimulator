@@ -9,15 +9,15 @@ namespace House
 
         private void OnEnable()
         {
-            _collisionDetector.IntruderEntered += OnIntruderStatusChanged;
+            _collisionDetector.IntruderEntered += IntruderStatusChanged;
         }
 
         private void OnDisable()
         {
-            _collisionDetector.IntruderEntered -= OnIntruderStatusChanged;
+            _collisionDetector.IntruderEntered -= IntruderStatusChanged;
         }
 
-        private void OnIntruderStatusChanged(bool isEntered)
+        private void IntruderStatusChanged(bool isEntered)
         {
             _alarmSound.SetAlarm(isEntered);
         }
